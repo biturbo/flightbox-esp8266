@@ -12,10 +12,11 @@
 import smbus
 import time
 from ctypes import c_short
- 
-DEVICE = 0x77 # Default device I2C address
- 
-#bus = smbus.SMBus(0)  # Rev 1 Pi uses 0
+from ctypes import c_byte
+from ctypes import c_ubyte
+
+DEVICE = 0x77 # Default device I2C address RY module
+
 bus = smbus.SMBus(1) # Rev 2 Pi uses 1 
  
 def convertToString(data):
@@ -117,10 +118,10 @@ def main():
 #  (chip_id, chip_version) = readBmp180Id()
 #  print("Chip ID     : {0}".format(chip_id))
 #  print("Version     : {0}".format(chip_version))
-
-#  print
+#
+  print
   
-#  (temperature,pressure,altitude) = readBmp180All()
+  (temperature,pressure,altitude) = readBmp180All()
 #  print("Temperature : {0:0.3f} deg C".format(temperature))
 #  print("Pressure    : {0:0.2f} mbar".format(pressure))
 #  print("Altitude    : {0:0.2f} m".format(altitude))
