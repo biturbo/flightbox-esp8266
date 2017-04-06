@@ -1,0 +1,15 @@
+$def with (greeting)
+
+<html>
+    <head>
+        <title>PCAS Settings</title>
+    </head>
+<body>
+
+$if greeting:
+   Settings have been saved, Please Reboot Device <em style="color: green; font-size: 1em;">$greeting</em>.
+$else:
+    <em>Hello</em>, world!
+
+</body>
+</html>

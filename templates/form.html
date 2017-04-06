@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PCAS Settings</title>
+
+<style type="text/css">
+.form-style-6{
+    font: 110% Arial, Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+.form-style-6 h1{
+    background: #43D1AF;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 3%;
+    border: 1px solid #43D1AF;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+    font: 120% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: #2EBC99;
+}
+</style>
+
+
+</head>
+   <body>
+      <div class="form-style-6">
+      <h1>PCAS Settings</h1>
+	<form method="post"  action="">
+         <fieldset>
+    <!--         <label for="description">Aircraft Registration:<br>(HBCKG, HBCYH, HBCLH, HBCHX, HBPIV):</label>
+            <input type="text" id="tail" name="tail" value="HBCYH" placeholder="Enter Registration"></>
+           <label for="description">ICAO:<br>(4b0652, 4b07bf, 4b066d, 4b0615, 4b2881):</label>
+            <input type="text" id="ICAO" name="ICAO" value="4b07bf" placeholder="Enter ICAO"></>  -->
+	    <label for="description">Aircraft Registration:</label>
+ 	    <select id="ICAO" name="ICAO">
+  				<option value="4b0652,HBCKG">HBCKG</option>
+				<option value="4b07bf,HBCYH">HBCYH</option>
+  				<option value="4b066d,HBCLH">HBCLH</option>
+  				<option value="4b0615,HBCHX">HBCHX</option>
+				<option value="4b2881,HBPIV">HBPIV</option>
+	    </select> 						
+	    <label for="description">Mode C/S Separation:</label>
+ 	    <select id="modecsep" name="modecsep">
+  				<option value="500">+/- 500ft</option>
+				<option value="1000">+/- 1000ft</option>
+  				<option value="2000">+/- 2000ft</option>
+  				<option value="4000">+/- 4000ft</option>
+				<option value="5000">+/- 5000ft</option>
+	    </select> 
+	    <label for="description">Mode C/S Detect:</label>
+	    <select  id="modecdet" name="modecdet">
+  				<option value="1">Ultra Short Range</option>
+				<option value="2">Short Range</option>
+  				<option value="3">Medium Range</option>
+  				<option value="4">Long Range</option>
+			</select> 
+            <br />
+            <input type="submit" value="SAVE and Reboot" />
+         </fieldset>
+      </form>
+<br />
+<label for="description">    FlightBox Log:   <a href="static/log.html">Log data</a></label>
+      </div>
+   </body>
+</html>
+
+
