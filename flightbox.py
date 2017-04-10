@@ -140,7 +140,7 @@ def flightbox_main():
         processes.append(input_network_ogn)
 
         # instantiate GNSS (input) module
-        input_serial_gnss = InputSerialGnss(data_hub, '/dev/ttyAMA0', 9600)    # serial device on Linux
+        input_serial_gnss = InputSerialGnss(data_hub, '/dev/ttyAMA0', 19200)    # serial device on Linux
         processes.append(input_serial_gnss)
 
         # start all modules in separate processes
